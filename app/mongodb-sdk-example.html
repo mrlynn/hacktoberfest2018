@@ -2,26 +2,29 @@
         <link type="text/css" rel="stylesheet" href="http://unpkg.com/bootstrap/dist/css/bootstrap.min.css"/>
         <link type="text/css" rel="stylesheet" href="http://unpkg.com/bootstrap-vue@latest/dist/bootstrap-vue.css"/>
         <!-- Add this after vue.js -->
-        <style>
-            body {
-                padding-top: 5rem;
-                padding-left: 5rem;
-                padding-right: 5rem;
-            }
-            .starter-template {
-                padding: 3rem 1.5rem;
-                text-align: center;
-            }
-        </style>
+        <link type="text/css" rel="stylesheet" href="./styles/index.css"/>
 </head>
 <div id="app">
-        <div class="jumbotron jumbotron-fluid">
-                <div class="container">
-                  <h1 class="display-4">MongoDB Hacktoberfest Entries</h1>
-                  <p class="lead">Welcome to Hacktoberfest!</p>
-                </div>
-              </div>
-    <table class="table">
+    <div class="jumbotron jumbotron-fluid">
+        <div class="container">
+            <h1 class="display-4">MongoDB Hacktoberfest Entries</h1>
+            <p class="lead">Welcome to Hacktoberfest!</p>
+        </div>
+    </div>
+    <div id="navigation">
+        <ul class="nav nav-pills">
+            <li class="nav-item">
+                <a class="nav-link" href="./github-api-example.html">GitHub</a>
+            </li>
+            <li class="nav-item">
+                <a class="nav-link active" href="#">MongoDB Javascript SDK</a>
+            </li>
+            <li class="nav-item">
+                <a class="nav-link " href="./mongodb-stitch-service-example.html">MongoDB Stitch Service</a>
+            </li>
+        </ul>
+    </div>
+    <table class="table" vcloak>
         <thead>
             <tr>
                 <th>Entry</th>
@@ -58,16 +61,7 @@
                 this.entries = docs;
             }).catch(err => {
                 console.error(err)
-            });
-        }
-    
-        // fetch('http://api.github.com/search/repositories?q=topic:mongodb+topic:stitch+topic:hacktoberfest')
-        // fetch('http://api.github.com/search/repositories?q=topic:mongodb+topic:stitch+topic:hacktoberfest')
-        // .then(response => response.json())
-        // .then(json => {
-        //     console.log(json.items);
-        //     this.entries = json.items;
-        // })
-        //}
+        });
+    }
 })
 </script>
